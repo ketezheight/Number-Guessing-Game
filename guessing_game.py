@@ -8,3 +8,16 @@ def start_game():
 answer = random.randint(1, 100)
 
 start_game()
+while True:
+    guess = int(input("Enter your guess: "))
+    
+    if guess == answer:
+        print("You got it!")
+        break
+    elif guess > answer:
+        print("It's lower.")
+        continue
+    elif guess < answer:
+        print("It's higher.")
+        continue
+

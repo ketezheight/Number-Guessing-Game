@@ -5,5 +5,6 @@ def start_game():
     player_name = input("Please enter your name: ")
     print("Instructions: {} guess a number between 1 and 100!".format(player_name))
 
-    
+answer = random.randint(1, 100)
+
 start_game()

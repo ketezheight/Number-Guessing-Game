@@ -16,9 +16,11 @@ start_game()
 while True:
     try:
     guess = int(input("Enter your guess: "))
-        if guess != int(guess):
-          raise ValueError("Guess has to be a number between 1 and 100")
-      
+        if guess > 100:
+            raise ValueError("Guess has to be a number between 1 and 100")
+        elif guess < 1:
+            raise ValueError("Guess has to be a number between 1 and 100")
+            
     except ValueError as err:
         print("That is not a valid value")
     

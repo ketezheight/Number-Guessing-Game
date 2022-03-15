@@ -11,6 +11,7 @@ def start_game():
     print("Instructions: {} guess a number between 1 and 100!".format(player_name))
 
 answer = random.randint(1, 100)
+tries = 0
 
 start_game()
 while True:
@@ -22,7 +23,7 @@ while True:
             raise ValueError("Guess has to be a number between 1 and 100")
             
     except ValueError as err:
-        print("That is not a valid value")
+        print("That is not a valid value, try again.")
     
     else:
         if guess == answer:
@@ -34,3 +35,12 @@ while True:
         elif guess < answer:
           print("It's higher.")
           continue
+            
+print("It took you {} attempts.".format(tries))
+
+new_game = input("Would you like to play again? (Y/N)  ")
+refresh = new_game.upper()
+if refresh == "Y":
+  start_game()
+elif refresh == "N":
+  print("Thank you for playing!")

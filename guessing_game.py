@@ -53,6 +53,7 @@ def start_game():
     start_game()
   elif new_game == "N":
     print("Thank you for playing!")
+    stats()
     
     
 

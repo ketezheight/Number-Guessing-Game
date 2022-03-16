@@ -1,7 +1,5 @@
 import random
-from statistics import mean
-from statistics import median
-from statistics import mode
+from statistics import mean, median, mode
 
 scoreboard = []
 
@@ -40,10 +38,8 @@ def start_game():
         break
       elif guess > answer:
         print("It's lower.")
-        continue
       elif guess < answer:
         print("It's higher.")
-        continue
     
   print(f"It took you {attempts} attempts.")
   scoreboard.append(attempts)

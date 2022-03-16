@@ -1,7 +1,17 @@
 import random
-import statistics
+from statistics import mean
+from statistics import median
+from statistics import mode
 
 scoreboard = []
+
+def stats():
+  score_mean = mean(scoreboard)
+  score_median = median(scoreboard)
+  score_mode = mode(scoreboard)
+  print(score_mean)
+  print(score_median)
+  print(score_mode)
 
 def intro():
   print("Welcome to \"Can You Guess the Number?\"")

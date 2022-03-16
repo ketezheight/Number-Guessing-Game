@@ -9,9 +9,9 @@ def stats():
   score_mean = mean(scoreboard)
   score_median = median(scoreboard)
   score_mode = mode(scoreboard)
-  print(score_mean)
-  print(score_median)
-  print(score_mode)
+  print(f"Mean of your attempts: {score_mean}")
+  print(f"Median of your attempts: {score_median}")
+  print(f"Mode of your attempts: {score_mode}")
 
 def intro():
   print("Welcome to \"Can You Guess the Number?\"")
@@ -45,7 +45,7 @@ def start_game():
         print("It's higher.")
         continue
     
-  print("It took you {} attempts.".format(attempts))
+  print(f"It took you {attempts} attempts.")
   scoreboard.append(attempts)
 
   new_game = input("Would you like to play again? (Y/N)  ").upper()
